@@ -13,10 +13,10 @@ const Newsapp = () => {
     const [darkMode, setDarkMode] = useState(false);
     const [search, setSearch] = useState("world");
     const [newsData, setNewsData] = useState(null);
-    const [headlines, setHeadlines] = useState([]);
-    const [userName, setUserName] = useState("User");
+    const [setHeadlines] = useState([]);
+    const [setUserName] = useState("User");
     const [user, setUser] = useState({ name: "", email: "" });
-    const [updatedName, setUpdatedName] = useState("");
+    const [setUpdatedName] = useState("");
     const [weather, setWeather] = useState(null);
     const [languageDropdownOpen, setLanguageDropdownOpen] = useState(false);
     const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem("language") || "en");

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "./AlertsPopup.css";
 
 const AlertsPopup = () => {
@@ -12,13 +12,8 @@ const AlertsPopup = () => {
     setOpen(!open);
   };
 
-  useEffect(() => {
-    if (open) {
-      fetchAlerts();
-    }
-  }, [open]);
-
-  const fetchAlerts = async () => {
+  // ✅ Wrap fetchAlerts with useCallback
+  const fetchAlerts = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch(API_URL);
@@ -32,7 +27,13 @@ const AlertsPopup = () => {
       setAlerts(["Failed to load alerts"]);
     }
     setLoading(false);
-  };
+  }, [API_URL]); // ✅ Include API_URL in dependencies
+
+  useEffect(() => {
+    if (open) {
+      fetchAlerts();
+    }
+  }, [open, fetchAlerts]); // ✅ Now fetchAlerts is safe to include
 
   return (
     <div>
