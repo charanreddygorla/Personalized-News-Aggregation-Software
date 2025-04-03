@@ -1,0 +1,105 @@
+.content {
+    background-color: #fff;
+    border-radius: 40px;
+    position: absolute; /* Change from relative to absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the div */
+    overflow: hidden;
+    width: 50vw;
+    min-height: 480px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+
+.content button {
+    background-color: #82257b;
+    color: #fff;
+    padding: 10px 10px;
+    border: 1px;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Removed hover effect */
+.content button:hover {
+    background-color: #82257b;
+    opacity: 1;
+}
+
+.header-text h1, .forgot a {
+    color: #82257b;
+}
+
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+
+.switch-content {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 0 60px 60px 0;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+.content.active .switch-content {
+    transform: translateX(100%);
+    border-radius: 60px 0 0 60px;
+}
+
+.switch {
+    background-color: #82257b;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.content.active .switch {
+    transform: translateX(50%);
+}
+
+/* Adjust switch panels so they remain in the view */
+.switch-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.switch-left {
+    transform: translateX(-100%);
+}
+
+.content.active .switch-left {
+    transform: translateX(0);
+}
+
+.switch-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.content.active .switch-right {
+    transform: translateX(100%);
+}

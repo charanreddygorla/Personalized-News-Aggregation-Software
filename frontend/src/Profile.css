@@ -1,0 +1,236 @@
+.profile-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+.profile-sidebar {
+    width: 250px;
+    background-color: #1f2937;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+/* Centered Buttons Inside Sidebar */
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.sidebar-btn {
+    width: 80%;
+    padding: 12px;
+    background-color: #374151;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.sidebar-btn.active {
+    background-color: #4b5563;
+}
+
+.sidebar-btn:hover {
+    background-color: #6b7280;
+}
+
+/* Content Section */
+.content-left {
+    flex: 1;
+    margin-left: 250px; /* Push content right so it doesn't overlap the sidebar */
+    padding: 30px;
+    background: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* User Profile Active Section */
+.user-profile {
+    width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-family: "Arial", sans-serif;
+}
+
+/* Profile Heading */
+.user-profile h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Profile Form */
+.user-profile form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Labels */
+.user-profile label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+.user-profile input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+/* Input Focus Effect */
+.user-profile input:focus {
+    border-color: #1f2937;
+    box-shadow: 0px 0px 5px rgba(31, 41, 55, 0.3);
+}
+
+/* Profile Form Spacing */
+.user-profile .form-group {
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+.user-profile button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+/* Button Hover */
+.user-profile button:hover {
+    background-color: #374151;
+}
+
+.themes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.themes-section h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+/* General Styling for Options */
+.theme-options {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theme-options label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/* Shape Selection */
+.shape-container {
+    display: flex;
+    gap: 15px;
+}
+
+.shape-option {
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+}
+
+.shape-option.selected {
+    border: 2px solid black;
+    transform: scale(1.1);
+}
+
+/* Gradient Selection */
+.gradient-container {
+    display: flex;
+    gap: 15px;
+}
+
+.gradient-option {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+}
+
+.gradient-option.selected {
+    border: 2px solid black;
+    transform: scale(1.1);
+}
+
+/* Gradient Color Pickers */
+.gradient-colors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.gradient-colors input {
+    width: 50px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    padding: 10px;
+    font-size: 16px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}

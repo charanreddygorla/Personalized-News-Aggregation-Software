@@ -1,0 +1,469 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: var(--theme-color);
+    color: var(--theme-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    --theme-color: #007bff;
+    --theme-shape: 0px;
+    --theme-gradient: #007bff;
+    --theme-radius: 20px;
+}
+
+.news-card {
+    background: var(--theme-gradient);
+    border-radius: var(--theme-shape);
+    transition: border-radius 0.3s ease;
+    /* other styles remain the same */
+}
+
+.themed-element {
+    background-color: var(--theme-color);
+}
+
+.news-app {
+    width: 100%;
+    padding: 20px;
+}
+
+
+.news-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--theme-color); 
+    padding: 15px 30px;
+    color: white;
+    position: relative;
+    z-index: 999;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed; /* Keeps it above other elements */
+    top: 0;
+    left: -250px; /* Hidden initially */
+    width: 250px;
+    height: 100vh; /* Full height */
+    background: #222;
+    color: white;
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.sidebar ul li:hover {
+    background: #333;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-bar input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.search-bar button {
+    background-color: var(--theme-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #218838;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.hero-section h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a73e8;
+}
+
+/* News Card Styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card {
+    width: 22%;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a73e8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card-title:hover {
+    text-decoration: underline;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.read-more-btn {
+    padding: 8px 16px;
+    background-color: var(--theme-color);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #55585a;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+
+    .search-bar input {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%;
+    }
+
+    .search-bar {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+}
+
+/* Breaking News Bar */
+.breaking-news {
+    display: flex;
+    align-items: center;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.breaking-news-label {
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.breaking-news marquee {
+    flex: 1;
+}
+
+.user-menu {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.user-icon {
+    font-size: 32px;
+    color: #333;
+}
+
+.user-menu .dropdown {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: #222;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+    padding: 12px 0;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    border-radius: 8px;
+    margin: 4px 10px;
+}
+
+.dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.02);
+}
+
+.dropdown-icon {
+    font-size: 18px;
+    margin-right: 12px;
+}
+
+.dropdown-divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 8px 10px;
+}
+
+.logout {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.sub-dropdown {
+    background: #333;
+    border-radius: 8px;
+    margin: 5px 15px;
+    padding: 8px 0;
+}
+
+.sub-dropdown-item {
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.sub-dropdown-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: white;
+}
+
+.dark-mode .news-card {
+    color: #333; /* Maintain contrast */
+}
+
+.bell-icon {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    cursor: pointer;
+    color: grey;
+    transition: color 0.3s ease-in-out;
+}
+
+.bell-icon.active {
+    color: yellow;
+}
+
+.location-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    list-style: none;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li:hover {
+    background-color: #ddd;
+}
+
+.location-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.weather-info {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+    color: white;
+}
+.weather-info img {
+    width: 50px;
+}
+
+
+.breaking-news-container {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 3px 5px;
+}
+
+.breaking-label {
+    margin-right: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.breaking-news marquee {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+}

@@ -1,0 +1,148 @@
+body {
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e0e7ef); /* Gradient background for smooth transition */
+    background-size: cover; /* Ensure the gradient fills the whole page */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    box-sizing: border-box;
+}
+
+.news-page {
+    max-width: 800px; /* Reduced width */
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Makes sure the content stays on top of the background */
+}
+
+/* Optional: Add a subtle texture to the background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt.png'); /* Example pattern */
+    opacity: 0.2; /* Lightens the texture effect */
+    pointer-events: none; /* Prevents interaction with the texture layer */
+    z-index: 0; /* Keeps the texture in the background */
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category-card {
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 15px;
+    width: 160px; /* Smaller size */
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    text-align: center;
+    background-color: #a2bfdd; /* Default light background */
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #007bff;
+}
+
+.category-card.selected {
+    border-color: #007bff;
+    background-color: #e3f2fd; /* Blue background when selected */
+}
+
+.icon {
+    font-size: 1.5rem; /* Smaller icon */
+    color: #007bff;
+    margin-bottom: 5px;
+}
+
+.category-card h2 {
+    font-size: 1.2rem; /* Smaller text */
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.category-card p {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    line-height: 1.3;
+}
+
+.category-image {
+    width: 100%; /* Image fills the card */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.save-button {
+    margin-top: 25px;
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.save-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.save-button:active {
+    transform: translateY(0);
+}
+
+/* Custom background colors for each category */
+.category-card.blue {
+    background-color: #87ceeb; /* Sky blue */
+}
+
+.category-card.pink {
+    background-color: #fce4ec; /* Light pink */
+}
+
+.category-card.green {
+    background-color: #e8f5e9; /* Light green */
+}
+
+.category-card.purple {
+    background-color: #f3e5f5; /* Light purple */
+}
+
+.category-card.orange {
+    background-color: #ffe0b2; /* Light orange */
+}

@@ -1,0 +1,101 @@
+.subscription-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .plans {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .plan {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid transparent;
+  }
+  
+  /* Free Plan Styling */
+  .free-plan {
+    border-color: black;
+    background-color: #e0f7fa;
+  }
+  
+  /* Subscription Plan Styling */
+  .subscription-plan {
+    border-color: black;
+    background-color: #e0f7fa;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  p {
+    margin: 5px 0;
+    color: black;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .free-plan button {
+    background-color: #00bcd4;
+    color: white;
+  }
+  
+  .subscription-plan button {
+    background-color: #00bcd4;
+    color: white;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  @media (max-width: 768px) {
+    .plans {
+      flex-direction: column;
+    }
+  }
+  
+  .hover-effect {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hover-effect:hover {
+    transform: scale(1.05);
+  }
+  
+  .plan hr {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 10px 0;
+    width: 100%;
+  }
